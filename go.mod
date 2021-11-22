@@ -9,7 +9,7 @@ require (
 	github.com/Masterminds/sprig/v3 v3.2.2
 	github.com/Microsoft/hcsshim v0.8.7 // indirect
 	github.com/Shopify/sarama v1.23.1 // indirect
-	github.com/Yapcheekian/oxy v1.6.0
+	github.com/17media/oxy v1.6.0
 	github.com/abbot/go-http-auth v0.0.0-00010101000000-000000000000
 	github.com/abronan/valkeyrie v0.2.0
 	github.com/aws/aws-sdk-go v1.39.0
