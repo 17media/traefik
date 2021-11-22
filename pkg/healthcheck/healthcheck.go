@@ -11,7 +11,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/Yapcheekian/oxy/roundrobin"
+	"github.com/17media/oxy/roundrobin"
 	gokitmetrics "github.com/go-kit/kit/metrics"
 	"github.com/traefik/traefik/v2/pkg/config/dynamic"
 	"github.com/traefik/traefik/v2/pkg/config/runtime"
