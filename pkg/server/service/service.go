@@ -10,8 +10,8 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/Yapcheekian/oxy/roundrobin"
-	"github.com/Yapcheekian/oxy/roundrobin/stickycookie"
+	"github.com/17media/oxy/roundrobin"
+	"github.com/17media/oxy/roundrobin/stickycookie"
 	"github.com/containous/alice"
 	"github.com/traefik/traefik/v2/pkg/config/dynamic"
 	"github.com/traefik/traefik/v2/pkg/config/runtime"
