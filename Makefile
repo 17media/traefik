@@ -120,6 +120,9 @@ build-image: binary
 	rm -rf webui/static
 	docker build -t $(TRAEFIK_IMAGE) .
 
+## Push Traefik image to GCR
+push-image: binary
+	docker tag $(TRAEFIK_IMAGE) gcr.io/
 ## Build a Docker Traefik image
 build-image-dirty: binary
 	docker build -t $(TRAEFIK_IMAGE) .
