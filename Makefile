@@ -8,7 +8,7 @@ VERSION_GIT := $(if $(TAG_NAME),$(TAG_NAME),$(SHA))
 VERSION := $(if $(VERSION),$(VERSION),$(VERSION_GIT))
 
 BIND_DIR := dist
-DOCKER_REPO_URL := gcr.io/media17-streaming
+DOCKER_REPO_URL := gcr.io/media17-streaming/traefik
 
 GIT_BRANCH := $(subst heads/,,$(shell git rev-parse --abbrev-ref HEAD 2>/dev/null))
 TRAEFIK_DEV_IMAGE := traefik-dev$(if $(GIT_BRANCH),:$(subst /,-,$(GIT_BRANCH)))
@@ -122,10 +122,10 @@ build-image: binary
 	docker build -t $(TRAEFIK_IMAGE) .
 
 ## Push Traefik image to GCR
-push-image: binary
-	docker tag $(TRAEFIK_IMAGE):$(GIT_BRANCH) $(DOCKER_REPO_URL):$(TAG_NAME)
+push-image:
+	docker tag $(TRAEFIK_IMAGE):latest $(DOCKER_REPO_URL):$(TAG_NAME)
 	docker push $(DOCKER_REPO_URL):$(TAG_NAME)
-	
+
 ## Build a Docker Traefik image
 build-image-dirty: binary
 	docker build -t $(TRAEFIK_IMAGE) .
