@@ -125,7 +125,7 @@ build-image: binary
 push-image:
 	docker tag $(TRAEFIK_IMAGE):latest $(DOCKER_REPO_URL):$(TAG_NAME)
 	docker push $(DOCKER_REPO_URL):$(TAG_NAME)
-	
+
 ## Build a Docker Traefik image
 build-image-dirty: binary
 	docker build -t $(TRAEFIK_IMAGE) .
